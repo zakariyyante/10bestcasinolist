@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #020402;
+  --color-card-bg: #0a0d0a;
+  --color-primary: #d4af37; /* Metallic Gold */
+  --color-accent: #00ff41; /* Glowing Green from logo */
+  --color-silver: #c0c0c0;
+  --color-bronze: #cd7f32;
+  --color-muted: #1a1f1a;
+  --color-muted-foreground: #a0a0a0;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #020402;
+  --card-bg: #0a0d0a;
+  --primary: #d4af37;
+  --accent: #00ff41;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(212, 175, 55, 0.03) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .premium-card {
+    background: linear-gradient(145deg, #0f140f 0%, #050705 100%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  }
+
+  .gold-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-[#f9f295] via-[#e0aa3e] to-[#b88a44];
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+
+  .silver-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-[#ffffff] via-[#c0c0c0] to-[#808080];
+  }
+
+  .glow-green {
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    border-color: rgba(0, 255, 65, 0.3);
+  }
+
+  .ornate-border {
+    position: relative;
+    padding: 2px;
+    background: linear-gradient(135deg, #d4af37 0%, #f9f295 50%, #b88a44 100%);
+    border-radius: 1rem;
+  }
+
+  .ornate-inner {
+    background: #0a0d0a;
+    border-radius: calc(1rem - 2px);
+    height: 100%;
+    width: 100%;
+  }
+
+  .luxury-button {
+    background: linear-gradient(to bottom, #f9f295 0%, #e0aa3e 100%);
+    color: #1a1100;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 15px rgba(224, 170, 62, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid #f9f295;
+  }
+
+  .luxury-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 170, 62, 0.5);
+    filter: brightness(1.1);
+  }
+
+  .felt-pattern {
+    background-color: #050a05;
+    background-image: radial-gradient(circle at 2px 2px, rgba(0, 255, 65, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
+
+.nav-link {
+  @apply relative text-sm font-bold uppercase tracking-widest text-white/60 transition-all duration-300;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute -bottom-1 left-0 h-[1px] w-0 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover {
+  @apply text-primary;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
 }

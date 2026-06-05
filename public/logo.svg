@@ -1,0 +1,17 @@
+<svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield Icon -->
+  <path d="M40 20 L80 35 L80 65 C80 90 40 110 40 110 C40 110 0 90 0 65 L0 35 L40 20 Z" transform="translate(20, 10)" fill="#8b5cf6"/>
+  <path d="M50 25 L15 70 L35 70 L30 105 L65 60 L45 60 L50 25 Z" transform="translate(20, 10)" fill="#f97316"/>
+  
+  <!-- Wordmark -->
+  <text x="120" y="75" font-family="Arial, sans-serif" font-weight="900" font-size="56" letter-spacing="-2">
+    <tspan fill="#f97316">CASINO</tspan>
+    <tspan fill="#8b5cf6" dx="10">UK</tspan>
+    <tspan fill="#ffffff" dx="10">LIST</tspan>
+  </text>
+  
+  <!-- Sub-line -->
+  <text x="120" y="110" font-family="Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="4" fill="#94a3b8" text-transform="uppercase">
+    10BESTCASINOLIST.COM
+  </text>
+</svg>
