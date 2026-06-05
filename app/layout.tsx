@@ -10,10 +10,7 @@ export const metadata: Metadata = {
   title: "10 Best Casino List | UK's Premier Casino Review Hub 2026",
   description: "Expert-reviewed UK casino sites, exclusive bonuses, and rapid payouts. Find the best licensed online casinos in the UK.",
   icons: {
-    icon: [
-      { url: "/favicon.png", sizes: "64x64", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: "/favicon.png",
   },
 };
 
