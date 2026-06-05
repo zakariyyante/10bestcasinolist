@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // Replace with actual ID
-const CONVERSION_LABEL = "AW-XXXXXXXXXX/YYYYYYYYYY"; // Replace with actual ID
+const GA_MEASUREMENT_ID = "AW-18181597015";
+const CONVERSION_LABEL = "AW-18181597015";
 
 export default function RootLayout({
   children,

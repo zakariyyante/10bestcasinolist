@@ -1,74 +1,136 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Brand } from '@/app/data/brands';
-import { BrandCard } from './BrandCard';
 import { Logo } from './Logo';
 import { Disclaimer } from './Disclaimer';
-import { Footer } from './Footer';
+import Link from 'next/link';
 
 interface MobileModalProps {
   brands: Brand[];
   gclid?: string;
 }
 
+declare global {
+  interface Window {
+    gtag_report_conversion: (url: string) => void;
+  }
+}
+
 export const MobileModal = ({ brands, gclid }: MobileModalProps) => {
   const [isOpen, setIsOpen] = useState(!!(gclid && brands.length > 0));
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+    return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
+  const buildUrl = (url: string) => gclid ? `${url}${gclid}` : url;
+
+  const handleClick = (brand: Brand) => {
+    const url = buildUrl(brand.url);
+    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+      window.gtag_report_conversion(url);
+    } else {
+      window.open(url, '_blank');
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-[100] bg-[#020402] overflow-y-auto animate-in fade-in duration-500">
+    <div className="fixed inset-0 z-[100] bg-[#020402] overflow-y-auto">
       <div className="min-h-screen flex flex-col">
-        {/* Modal Header */}
-        <div className="sticky top-0 z-[110] bg-[#020402]/95 backdrop-blur-xl border-b border-primary/20 p-6 flex items-center justify-between">
+
+        {/* Header */}
+        <div className="sticky top-0 z-[110] bg-[#020402]/95 backdrop-blur-xl border-b border-primary/20 px-4 py-3 flex items-center justify-between">
           <Logo />
-          <button 
-            onClick={() => setIsOpen(false)}
-            className="p-3 text-primary hover:text-white transition-all active:scale-90"
-          >
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button onClick={() => setIsOpen(false)} className="p-2 text-primary hover:text-white transition-all active:scale-90">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Modal Content */}
-        <div className="flex-grow relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
-          <div className="p-8 text-center relative z-10">
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 backdrop-blur-md">
-              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-primary">Exclusive Mobile Access</span>
-            </div>
-            <h2 className="text-4xl font-black mb-4 uppercase tracking-tighter">Elite <span className="gold-gradient-text">Mobile Gaming</span></h2>
-            <p className="text-sm text-muted-foreground mb-12 font-bold uppercase tracking-widest">Specialized bonuses for our mobile clientele.</p>
-
-            <div className="grid grid-cols-1 gap-10 mb-20 max-w-lg mx-auto">
-              {brands.map((brand, index) => (
-                <BrandCard 
-                  key={brand.id} 
-                  brand={brand} 
-                  rank={index + 1} 
-                  gclid={gclid}
-                />
-              ))}
-            </div>
-          </div>
-          
-          <Disclaimer />
-          <Footer />
+        {/* Hero Title */}
+        <div className="text-center pt-10 pb-6 px-4">
+          <h1 className="text-3xl font-black uppercase tracking-tighter leading-tight">
+            New UK Casinos <span className="gold-gradient-text">for June</span>
+          </h1>
         </div>
+
+        {/* Brand Cards — logo-first big layout */}
+        <div className="flex-grow px-4 pb-6 flex flex-col gap-4">
+          {brands.map((brand, index) => {
+            const rankColors = [
+              'from-[#f9f295] to-[#b88a44] text-black border-[#f9f295]',
+              'from-[#ffffff] to-[#808080] text-black border-white',
+              'from-[#cd7f32] to-[#8b4513] text-black border-[#cd7f32]',
+            ];
+            const rankLabels = ['#1 TOP PICK', '#2 FEATURED', '#3 HOT'];
+
+            return (
+              <div
+                key={brand.id}
+                onClick={() => handleClick(brand)}
+                className="premium-card rounded-2xl overflow-hidden cursor-pointer active:scale-[0.98] transition-transform"
+              >
+                {/* Rank strip */}
+                {index < 3 && (
+                  <div className={`bg-gradient-to-r ${rankColors[index]} text-center text-[10px] font-black tracking-widest py-1.5 px-4`}>
+                    {rankLabels[index]}
+                  </div>
+                )}
+
+                {/* Logo area — big and centred */}
+                <div className="bg-black/60 flex items-center justify-center py-8 px-8 border-b border-primary/10">
+                  <div className="relative w-48 h-20">
+                    <Image
+                      src={brand.logo}
+                      alt={brand.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Offer + CTA */}
+                <div className="p-5 flex items-center justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Exclusive Offer</p>
+                    <p className="text-sm font-bold text-white leading-snug">{brand.bonus}</p>
+                    <div className="flex items-center gap-1 mt-2">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className={`text-xs ${i < Math.floor(brand.rating / 2) ? 'text-primary' : 'text-white/10'}`}>★</span>
+                      ))}
+                      <span className="text-[10px] text-muted-foreground ml-1 font-bold">{brand.votes.toLocaleString()}</span>
+                    </div>
+                  </div>
+                  <button className="luxury-button flex-shrink-0 px-5 py-3 rounded-xl text-xs whitespace-nowrap">
+                    Claim Now
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Disclaimer */}
+        <Disclaimer />
+
+        {/* Minimal footer */}
+        <div className="bg-[#020402] border-t border-white/5 py-6 px-4 text-center">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+            <Link href="/privacy" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="/terms" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/affiliate-disclosure" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Affiliate Disclosure</Link>
+          </div>
+          <p className="text-[10px] text-muted-foreground font-medium">
+            © {new Date().getFullYear()} 10bestcasinolist.com · 18+ · Play Responsibly
+          </p>
+        </div>
+
       </div>
     </div>
   );
