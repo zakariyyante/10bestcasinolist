@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const GA_MEASUREMENT_ID = "AW-18181597015";
-const CONVERSION_LABEL = "AW-18181597015";
+const CONVERSION_LABEL = "AW-18181597015/F-xRCOefr7ccENfO1N1D";
 
 export default function RootLayout({
   children,
@@ -43,8 +43,11 @@ export default function RootLayout({
                 }
               };
               gtag('event', 'conversion', {
-                  'send_to': '${CONVERSION_LABEL}',
-                  'event_callback': callback
+                'send_to': '${CONVERSION_LABEL}',
+                'value': 1.0,
+                'currency': 'USD',
+                'transaction_id': '',
+                'event_callback': callback
               });
               return false;
             };
