@@ -19,6 +19,8 @@ export const Footer = () => {
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
           {[
             { name: 'Home', href: '/' },
+            { name: 'About Us', href: '/about' },
+            { name: 'Contact Us', href: '/contact' },
             { name: 'Privacy Policy', href: '/privacy' },
             { name: 'Terms of Service', href: '/terms' },
             { name: 'Affiliate Disclosure', href: '/affiliate-disclosure' },

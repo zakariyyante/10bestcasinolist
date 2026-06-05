@@ -10,8 +10,8 @@ export const Header = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Casinos', href: '/#brands' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms', href: '/terms' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
     { name: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
   ];
 
