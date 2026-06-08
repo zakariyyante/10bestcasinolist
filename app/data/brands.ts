@@ -10,15 +10,25 @@ export interface Brand {
 }
 
 export const brands: Brand[] = [
+  // {
+  //   id: "spinboss",
+  //   name: "SpinBoss",
+  //   logo: "/brands/spinboss.webp",
+  //   rating: 9.2,
+  //   bonus: "400% UP TO £12,750 + 400 FS",
+  //   url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
+  //   isMobile: true,
+  //   votes: 1340,
+  // },
   {
-    id: "spinboss",
-    name: "SpinBoss",
-    logo: "/brands/spinboss.webp",
-    rating: 9.2,
+    id: "spinpolo",
+    name: "SpinPolo",
+    logo: "/brands/spinpolo.webp",
+    rating: 9.0,
     bonus: "400% UP TO £12,750 + 400 FS",
-    url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=857&l=1778754174&sub2=SpinPolo-SL2UK1&sub1=",
     isMobile: true,
-    votes: 1340,
+    votes: 1105,
   },
   
   {
@@ -38,7 +48,7 @@ export const brands: Brand[] = [
     logo: "/brands/daytonaspin.svg",
     rating: 9.2,
     bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-SL2UK1&sub1=",
+    url: "https://bestcpa.online/click?o=380&a=75&aff_click_id=SL2UK1",
     isMobile: true,
     votes: 1340,
   },
@@ -67,16 +77,7 @@ export const brands: Brand[] = [
   //   isMobile: true,
   //   votes: 1842,
   // },
-  {
-    id: "spinpolo",
-    name: "SpinPolo",
-    logo: "/brands/spinpolo.webp",
-    rating: 9.0,
-    bonus: "400% UP TO £12,750 + 400 FS",
-    url: "https://bestcpa.online/click?o=468&a=75&aff_click_id=SL2UK1",
-    isMobile: true,
-    votes: 1105,
-  },
+  
 
   {
     id: "grosvenor-casinos",
