@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { track } from '@vercel/analytics';
 import { Brand } from '@/app/data/brands';
 import { Logo } from './Logo';
 import { Disclaimer } from './Disclaimer';
@@ -30,8 +31,29 @@ export const MobileModal = ({ brands, gclid }: MobileModalProps) => {
 
   const buildUrl = (url: string) => gclid ? `${url}${gclid}` : url;
 
-  const handleClick = (brand: Brand) => {
+  const handleClick = (brand: Brand, index: number) => {
     const url = buildUrl(brand.url);
+    const storageKey = `clicked_${brand.id}`;
+    const isFirstClick = !localStorage.getItem(storageKey);
+
+    if (isFirstClick) {
+      localStorage.setItem(storageKey, '1');
+      track('Brand Unique Click', {
+        brand: brand.name,
+        brand_id: brand.id,
+        rank: index + 1,
+        source: 'mobile_modal',
+      });
+    }
+
+    track('Brand Click', {
+      brand: brand.name,
+      brand_id: brand.id,
+      rank: index + 1,
+      is_unique: isFirstClick,
+      source: 'mobile_modal',
+    });
+
     if (typeof window !== 'undefined' && window.gtag_report_conversion) {
       window.gtag_report_conversion(url);
     } else {
@@ -73,7 +95,7 @@ export const MobileModal = ({ brands, gclid }: MobileModalProps) => {
             return (
               <div
                 key={brand.id}
-                onClick={() => handleClick(brand)}
+                onClick={() => handleClick(brand, index)}
                 className="premium-card rounded-2xl overflow-hidden cursor-pointer active:scale-[0.98] transition-transform"
               >
                 {/* Rank strip */}

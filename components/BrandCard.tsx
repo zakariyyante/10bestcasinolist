@@ -26,7 +26,25 @@ export const BrandCard = ({ brand, rank, gclid }: BrandCardProps) => {
   const finalUrl = buildUrl(brand.url, gclid);
 
   const handleCardClick = () => {
-    track('Brand Click', { brand: brand.name });
+    const storageKey = `clicked_${brand.id}`;
+    const isFirstClick = !localStorage.getItem(storageKey);
+
+    if (isFirstClick) {
+      localStorage.setItem(storageKey, '1');
+      track('Brand Unique Click', {
+        brand: brand.name,
+        brand_id: brand.id,
+        rank: rank ?? 0,
+      });
+    }
+
+    track('Brand Click', {
+      brand: brand.name,
+      brand_id: brand.id,
+      rank: rank ?? 0,
+      is_unique: isFirstClick,
+    });
+
     if (typeof window !== 'undefined' && window.gtag_report_conversion) {
       window.gtag_report_conversion(finalUrl);
     } else {
