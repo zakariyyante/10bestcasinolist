@@ -30,30 +30,30 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1340,
   },
-  {
-    id: "spinboss",
-    name: "SpinBoss",
-    logo: "/brands/spinboss.webp",
-    rating: 9.2,
-    bonus: "400% UP TO £12,750 + 400 FS",
-    url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
-    isMobile: true,
-    votes: 1340,
-  },
+  // {
+  //   id: "spinboss",
+  //   name: "SpinBoss",
+  //   logo: "/brands/spinboss.webp",
+  //   rating: 9.2,
+  //   bonus: "400% UP TO £12,750 + 400 FS",
+  //   url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
+  //   isMobile: true,
+  //   votes: 1340,
+  // },
   
 
   
   
-  {
-    id: "vegashero",
-    name: "VegasHero",
-    logo: "/brands/VegasHero.png",
-    rating: 9.5,
-    bonus: "125% UP TO £1,250 + 250 FS",
-    url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-SL2UK1&clickid=",
-    isMobile: true,
-    votes: 1842,
-  },
+  // {
+  //   id: "vegashero",
+  //   name: "VegasHero",
+  //   logo: "/brands/VegasHero.png",
+  //   rating: 9.5,
+  //   bonus: "125% UP TO £1,250 + 250 FS",
+  //   url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-SL2UK1&clickid=",
+  //   isMobile: true,
+  //   votes: 1842,
+  // },
   {
     id: "spinpolo",
     name: "SpinPolo",
