@@ -11,6 +11,17 @@ export interface Brand {
 
 export const brands: Brand[] = [
   {
+    id: "spinboss",
+    name: "SpinBoss",
+    logo: "/brands/spinboss.webp",
+    rating: 9.2,
+    bonus: "400% UP TO £12,750 + 400 FS",
+    url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
+    isMobile: true,
+    votes: 1340,
+  },
+  
+  {
     id: "bananzia",
     name: "Bananzia",
     logo: "/brands/bananzia.svg",
@@ -41,16 +52,7 @@ export const brands: Brand[] = [
   //   isMobile: true,
   //   votes: 1340,
   // },
-  // {
-  //   id: "spinboss",
-  //   name: "SpinBoss",
-  //   logo: "/brands/spinboss.webp",
-  //   rating: 9.2,
-  //   bonus: "400% UP TO £12,750 + 400 FS",
-  //   url: "https://spbs.lynmonkel.com/?mid=355610_2121758&subid=SpinBoss-SL2UK1&clickid=",
-  //   isMobile: true,
-  //   votes: 1340,
-  // },
+  
   
 
   
