@@ -32,32 +32,22 @@ export const brands: Brand[] = [
     votes: 1340,
   },
   
-  
-  // {
-  //   id: "bananzia",
-  //   name: "Bananzia",
-  //   logo: "/brands/bananzia.svg",
-  //   rating: 9.2,
-  //   bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
-  //   url: "https://go.drctvoodoo.com/click?pid=6&offer_id=12&sub2=Bananzia-SL2UK1&sub1=",
-  //   isMobile: true,
-  //   votes: 1340,
-  // },
+
   
   
 
   
   
-  // {
-  //   id: "vegashero",
-  //   name: "VegasHero",
-  //   logo: "/brands/VegasHero.png",
-  //   rating: 9.5,
-  //   bonus: "125% UP TO £1,250 + 250 FS",
-  //   url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-SL2UK1&clickid=",
-  //   isMobile: true,
-  //   votes: 1842,
-  // },
+  {
+    id: "vegashero",
+    name: "VegasHero",
+    logo: "/brands/VegasHero.png",
+    rating: 9.5,
+    bonus: "125% UP TO £1,250 + 250 FS",
+    url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-SL2UK1&clickid=",
+    isMobile: true,
+    votes: 1842,
+  },
   {
     id: "spinpolo",
     name: "SpinPolo",
