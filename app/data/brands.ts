@@ -10,6 +10,7 @@ export interface Brand {
 }
 
 export const brands: Brand[] = [
+  
   {
     id: "daytonaspin",
     name: "DaytonaSpin",
@@ -20,7 +21,6 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1340,
   },
-  
   {
     id: "bananzia",
     name: "Bananzia",
@@ -31,6 +31,10 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1340,
   },
+  
+  
+  
+  
   
 
   
