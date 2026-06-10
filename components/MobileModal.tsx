@@ -19,8 +19,20 @@ declare global {
   }
 }
 
+const isMobileDevice = () => {
+  if (typeof window === 'undefined') return false;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    || window.innerWidth < 768;
+};
+
 export const MobileModal = ({ brands, gclid }: MobileModalProps) => {
-  const [isOpen, setIsOpen] = useState(!!(gclid && brands.length > 0));
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (gclid && brands.length > 0 && isMobileDevice()) {
+      setIsOpen(true);
+    }
+  }, [gclid, brands.length]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'unset';
