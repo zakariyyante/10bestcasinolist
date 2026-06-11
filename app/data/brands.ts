@@ -21,17 +21,6 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1340,
   },
-  
-  {
-    id: "bananzia",
-    name: "Bananzia",
-    logo: "/brands/bananzia.svg",
-    rating: 9.2,
-    bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
-    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
-    isMobile: true,
-    votes: 1340,
-  },
   {
     id: "spinpolo",
     name: "SpinPolo",
@@ -42,6 +31,17 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1105,
   },
+  {
+    id: "bananzia",
+    name: "Bananzia",
+    logo: "/brands/bananzia.svg",
+    rating: 9.2,
+    bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
+    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
+    isMobile: true,
+    votes: 1340,
+  },
+  
   
   
   
