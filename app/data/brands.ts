@@ -37,7 +37,7 @@ export const brands: Brand[] = [
     logo: "/brands/bananzia.svg",
     rating: 9.2,
     bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
-    url: "https://go.drctvoodoo.com/click?pid=6&offer_id=12&sub2=Bananzia-SL2UK1&sub1=",
+    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
     isMobile: true,
     votes: 1340,
   },
