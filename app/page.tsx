@@ -16,6 +16,7 @@ export default async function Home({
   const params = await searchParams;
   const gclid = typeof params.gclid === 'string' ? params.gclid : undefined;
   const mobileBrands = brands.filter(b => b.isMobile);
+  const desktopBrands = brands.filter(b => !b.isMobile);
 
   return (
     <div className="flex flex-col min-h-screen selection:bg-primary selection:text-black">
@@ -39,7 +40,7 @@ export default async function Home({
             </div>
             
             <div className="flex flex-col gap-6 max-w-4xl mx-auto">
-              {brands.map((brand, index) => (
+              {desktopBrands.map((brand, index) => (
                 <BrandCard 
                   key={brand.id} 
                   brand={brand} 
