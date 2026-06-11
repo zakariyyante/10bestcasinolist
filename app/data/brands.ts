@@ -21,16 +21,7 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1340,
   },
-  {
-    id: "spinpolo",
-    name: "SpinPolo",
-    logo: "/brands/spinpolo.webp",
-    rating: 9.0,
-    bonus: "400% UP TO £12,750 + 400 FS",
-    url: "https://bestcpa.online/click?o=468&a=75&aff_click_id=SL2UK1",
-    isMobile: true,
-    votes: 1105,
-  },
+  
   {
     id: "bananzia",
     name: "Bananzia",
@@ -40,6 +31,16 @@ export const brands: Brand[] = [
     url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
     isMobile: true,
     votes: 1340,
+  },
+  {
+    id: "spinpolo",
+    name: "SpinPolo",
+    logo: "/brands/spinpolo.webp",
+    rating: 9.0,
+    bonus: "400% UP TO £12,750 + 400 FS",
+    url: "https://bestcpa.online/click?o=468&a=75&aff_click_id=SL2UK1",
+    isMobile: true,
+    votes: 1105,
   },
   
   
