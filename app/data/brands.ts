@@ -11,6 +11,17 @@ export interface Brand {
 
 export const brands: Brand[] = [
   {
+    id: "spinpolo",
+    name: "SpinPolo",
+    logo: "/brands/spinpolo.webp",
+    rating: 9.0,
+    bonus: "777% Up To £7777 + 385FS + 300k Chips",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=857&l=1778754174&sub2=SpinPolo-SL2UK1&sub1=",
+    isMobile: true,
+    votes: 1105,
+  },
+  
+  {
     id: "bananzia",
     name: "Bananzia",
     logo: "/brands/bananzia.svg",
@@ -21,16 +32,7 @@ export const brands: Brand[] = [
     votes: 1340,
   },
   
-  {
-    id: "spinpolo",
-    name: "SpinPolo",
-    logo: "/brands/spinpolo.webp",
-    rating: 9.0,
-    bonus: "777% Up To £7777 + 385FS + 300k Chips",
-    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=857&l=1778754174&sub2=SpinPolo-SL2UK1&sub1=",
-    isMobile: true,
-    votes: 1105,
-  },
+  
   
   
   {
