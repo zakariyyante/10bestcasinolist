@@ -11,6 +11,17 @@ export interface Brand {
 
 export const brands: Brand[] = [
   {
+    id: "daytonaspin",
+    name: "DaytonaSpin",
+    logo: "/brands/daytonaspin.svg",
+    rating: 9.2,
+    bonus: "255% Up To 4500 £ + 255 FS",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-SL2UK1&sub1=",
+    isMobile: true,
+    votes: 1340,
+  },
+  
+  {
     id: "bananzia",
     name: "Bananzia",
     logo: "/brands/bananzia.svg",
@@ -37,16 +48,7 @@ export const brands: Brand[] = [
   
   
   
-  {
-    id: "daytonaspin",
-    name: "DaytonaSpin",
-    logo: "/brands/daytonaspin.svg",
-    rating: 9.2,
-    bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-SL2UK1&sub1=",
-    isMobile: true,
-    votes: 1340,
-  },
+  
   
   
   
