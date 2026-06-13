@@ -21,28 +21,10 @@ export const brands: Brand[] = [
     votes: 1340,
   },
   
-  {
-    id: "zombillion",
-    name: "Zombillion",
-    logo: "/brands/zombillion.svg",
-    rating: 9.0,
-    bonus: "Welcome Pack 250% up to £4000 + 200 FS",
-    url: "https://direct.club.partners/click?pid=19&offer_id=33&l=1778175466&sub2=Zombillion-SL2UK1&sub1=",
-    isMobile: true,
-    votes: 1105,
-  },
+  
 
 
-  {
-    id: "daytonaspin",
-    name: "DaytonaSpin",
-    logo: "/brands/daytonaspin.svg",
-    rating: 9.2,
-    bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-SL2UK1&sub1=",
-    isMobile: true,
-    votes: 1340,
-  },
+  
   
   
   
@@ -56,9 +38,27 @@ export const brands: Brand[] = [
     isMobile: true,
     votes: 1105,
   },
+  {
+    id: "daytonaspin",
+    name: "DaytonaSpin",
+    logo: "/brands/daytonaspin.svg",
+    rating: 9.2,
+    bonus: "255% Up To 4500 £ + 255 FS",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-SL2UK1&sub1=",
+    isMobile: true,
+    votes: 1340,
+  },
   
-  
-  
+  {
+    id: "zombillion",
+    name: "Zombillion",
+    logo: "/brands/zombillion.svg",
+    rating: 9.0,
+    bonus: "Welcome Pack 250% up to £4000 + 200 FS",
+    url: "https://direct.club.partners/click?pid=19&offer_id=33&l=1778175466&sub2=Zombillion-SL2UK1&sub1=",
+    isMobile: true,
+    votes: 1105,
+  },
   
   
   
