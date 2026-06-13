@@ -49,16 +49,16 @@ export const brands: Brand[] = [
     votes: 1340,
   },
   
-  {
-    id: "zombillion",
-    name: "Zombillion",
-    logo: "/brands/zombillion.svg",
-    rating: 9.0,
-    bonus: "Welcome Pack 250% up to £4000 + 200 FS",
-    url: "https://direct.club.partners/click?pid=19&offer_id=33&l=1778175466&sub2=Zombillion-SL2UK1&sub1=",
-    isMobile: true,
-    votes: 1105,
-  },
+  // {
+  //   id: "zombillion",
+  //   name: "Zombillion",
+  //   logo: "/brands/zombillion.svg",
+  //   rating: 9.0,
+  //   bonus: "Welcome Pack 250% up to £4000 + 200 FS",
+  //   url: "https://direct.club.partners/click?pid=19&offer_id=33&l=1778175466&sub2=Zombillion-SL2UK1&sub1=",
+  //   isMobile: true,
+  //   votes: 1105,
+  // },
   
   
   
