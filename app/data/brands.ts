@@ -41,7 +41,7 @@ export const brands: Brand[] = [
     logo: "/brands/daytonaspin.svg",
     rating: 9.2,
     bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://bestcpa.online/click?o=380&a=75&sub_id1=Bananzia-SL2UK1&aff_click_id=",
+    url: "https://bestcpa.online/click?o=380&a=75&sub_id1=DaytonaSpin-SL2UK1&aff_click_id=",
     isMobile: true,
     votes: 1340,
   },
