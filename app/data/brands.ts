@@ -11,6 +11,29 @@ export interface Brand {
 
 export const brands: Brand[] = [
   {
+    id: "bananzia",
+    name: "Bananzia",
+    logo: "/brands/bananzia.svg",
+    rating: 9.2,
+    bonus: "Casino Welcome Bonus 300% up to £3000 + 300 FS!",
+    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
+    isMobile: true,
+    votes: 1340,
+  },
+  
+  {
+    id: "zombillion",
+    name: "Zombillion",
+    logo: "/brands/zombillion.svg",
+    rating: 9.0,
+    bonus: "Welcome Pack 250% up to £4000 + 200 FS",
+    url: "https://direct.club.partners/click?pid=19&offer_id=33&l=1778175466&sub2=Zombillion-SL2UK1&sub1=",
+    isMobile: true,
+    votes: 1105,
+  },
+
+
+  {
     id: "daytonaspin",
     name: "DaytonaSpin",
     logo: "/brands/daytonaspin.svg",
@@ -21,16 +44,7 @@ export const brands: Brand[] = [
     votes: 1340,
   },
   
-  {
-    id: "bananzia",
-    name: "Bananzia",
-    logo: "/brands/bananzia.svg",
-    rating: 9.2,
-    bonus: "Casino Welcome Bonus 300% up to £3000 + 300 FS!",
-    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-SL2UK1&aff_click_id=",
-    isMobile: true,
-    votes: 1340,
-  },
+  
   
   {
     id: "spinpolo",
